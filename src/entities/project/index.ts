@@ -1,0 +1,1 @@
+export { projectSlice } from './model';

@@ -1,9 +1,12 @@
+// TODO: move to app, save store ref in window to avoid cyclic deps when using store directly;
+// derived types still can be used, so reexport them from shared.
+
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from 'features/counter/counterSlice';
+import { projectSlice } from 'entities/project';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    project: projectSlice.reducer,
   },
 });
 
